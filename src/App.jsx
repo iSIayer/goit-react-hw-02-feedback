@@ -23,8 +23,8 @@ export class App extends Component {
     return Math.round((currentState.good * 100) / this.countTotalFeedback());
   };
 
-  handleLeaveFeedback = evt => {
-    const type = evt.currentTarget.getAttribute('value');
+  handleLeaveFeedback = feedback => {
+    const type = feedback.currentTarget.getAttribute('value');
     this.setState(prevState => {
       return {
         [type]: prevState[type] + 1,
