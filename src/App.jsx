@@ -24,10 +24,9 @@ export class App extends Component {
   };
 
   handleLeaveFeedback = feedback => {
-    const type = feedback.currentTarget.getAttribute('value');
     this.setState(prevState => {
       return {
-        [type]: prevState[type] + 1,
+        [feedback]: prevState[feedback] + 1,
       };
     });
   };

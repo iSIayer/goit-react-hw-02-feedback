@@ -8,7 +8,11 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
     <ul>
       {buttonsList.map(item => (
         <li key={item}>
-          <PrimaryButton type="button" value={item} onClick={onLeaveFeedback}>
+          <PrimaryButton
+            type="button"
+            value={item}
+            onClick={() => onLeaveFeedback(item)}
+          >
             {item}
           </PrimaryButton>
         </li>
